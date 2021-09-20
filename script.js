@@ -59,7 +59,7 @@ postcodeSearch.addEventListener('formdata', (e) => {
 								}
 							},
                             dataLabels: {
-                                enabled: true
+                                enabled: false
                             },
 							fill: {
 								type: 'gradient',
