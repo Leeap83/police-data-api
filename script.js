@@ -51,7 +51,6 @@ postcodeSearch.addEventListener('formdata', (e) => {
                         let options = {
                             chart: {
                                 type: 'donut',
-								width: 500,
                             },
 							plotOptions: {
 								pie: {
@@ -60,7 +59,7 @@ postcodeSearch.addEventListener('formdata', (e) => {
 								}
 							},
                             dataLabels: {
-                                enabled: false
+                                enabled: true
                             },
 							fill: {
 								type: 'gradient',
@@ -75,8 +74,16 @@ postcodeSearch.addEventListener('formdata', (e) => {
                             },
                             total: {
                                 show: true
-                            }
-                        }
+                            },
+                            responsive: [{
+                                breakpoint: undefined,
+                                options: {
+                                  legend: {
+                                    position: 'bottom'
+                                  }
+                                }
+                            }]
+                        };
 
                         let crimeType = new ApexCharts(document.getElementById('chart'), options)
 
